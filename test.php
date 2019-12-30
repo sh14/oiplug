@@ -4,7 +4,7 @@
  * @author Isaenko Alexey <info@oiplug.com>
  */
 
-function getClass( $classTrail ) {
+function getBem( $classTrail ) {
 	$classTrail = array_values( array_filter( explode( '.', $classTrail ) ) );
 
 	$mixins  = [];
@@ -39,9 +39,9 @@ function getClass( $classTrail ) {
 	return $classes;
 }
 
-getClass( '.block' );
-getClass( '.block.item' );
-getClass( '.block.item._one' );
-getClass( '.block.item._one._active' );
+getBem( '.block' );
+getBem( '.block.item' );
+getBem( '.block.item._one' );
+getBem( '.block.item._one._active' );
 
 // eof
