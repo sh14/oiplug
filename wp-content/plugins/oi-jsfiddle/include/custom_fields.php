@@ -5,7 +5,7 @@ function oijsfiddle_add_post_meta_boxes() // install custom meta box
 		'oi-post-class',                        // block ID
 		__( 'Дополнительно', 'oi' ),    // Title
 		'oijsfiddle_custom_fields_special',                    // Callback function
-		array( 'post','page'),                                // activate on specific post type
+		array( 'post', 'page' ),                                // activate on specific post type
 		'normal',                                    // Wher it should be placed
 		'core'                                // Priority
 	);
@@ -47,10 +47,12 @@ class oijsfiddle_custom_fields_special_class {
 			$post_id = get_the_ID();
 		}
 		$fields = self::$fields;
-		$values = $_POST['oijsfiddle_custom_fields_special'];
-		if ( sizeof( $values ) == 0 && sizeof( $_POST ) == 0 ) // если не происходит сохранение данных
+		$values = ! empty( $_POST['oijsfiddle_custom_fields_special'] ) ? $_POST['oijsfiddle_custom_fields_special'] : [];
+		// если не происходит сохранение данных
+		if ( ! empty( $_POST ) && 0 == sizeof( $_POST ) && sizeof( $values ) == 0 )
 		{
-			$values = get_post_meta( $post_id, 'oijsfiddle_custom_fields_special', true ); // get values from db
+			// get values from db
+			$values = get_post_meta( $post_id, 'oijsfiddle_custom_fields_special', true );
 		}
 
 		return $values;
@@ -115,7 +117,8 @@ function oijsfiddle_custom_fields_special_save( $post_id, $post_object ) {
 
 		if ( $values ) {
 			update_post_meta( $post_id, 'oijsfiddle_custom_fields_special', $values );
-		} else {
+		}
+		else {
 			delete_post_meta( $post_id, 'oijsfiddle_custom_fields_special' );
 		}
 	} // Nothing received, all fields are empty, delete option
