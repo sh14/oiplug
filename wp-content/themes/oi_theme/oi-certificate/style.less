@@ -1,0 +1,95 @@
+@color__black: #000;
+
+body {
+	height: 2000px;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 16pt;
+	font-weight: 300;
+	/*background: url(cert.png) 50% 0% / contain no-repeat;*/
+	background-color: #eee;
+
+	@media print{
+		background-color: #fff;
+	}
+}
+
+div {
+	box-sizing: border-box;
+}
+
+.cert {
+	background-color: #fff;
+	margin: auto;
+	width: 1048px;
+	padding: 2em;
+	color: #ccc;
+	text-align: center;
+
+	&__border {
+		position: relative;
+		border: 5px solid @color__black;
+		padding: 0 4em;
+		height: 635px;
+	}
+	&__title {
+		font-size: 2em;
+		color: @color__black;
+		margin: 1em 0;
+		line-height: 1;
+	}
+	&__subtitle {
+		line-height: 1;
+	}
+	&__name {
+		font-size: 2em;
+		color: @color__black;
+		font-weight: 400;
+		margin: 1em 0;
+		line-height: 1;
+	}
+	&__description {
+		line-height: 1.5;
+	}
+	&__profession {
+		font-size: 2em;
+		color: @color__black;
+		line-height: 1;
+		margin: 1em 0;
+	}
+	&__description2 {
+		line-height: 1;
+	}
+	&__date {
+		line-height: 1;
+		top: -2em;
+		position: absolute;
+		width: 100%;
+		left: 0;
+	}
+	&__id-block {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		margin-top: -1.3em;
+	}
+	&__id-block-container {
+		margin: auto;
+		display: table;
+		background-color: #fff;
+	}
+	&__url {
+		color: @color__black;
+		font-size: .6em;
+		line-height: 1;
+		padding: 0 0 .4em 0;
+	}
+	&__id {
+		text-transform: uppercase;
+		font-size: 1.2em;
+		line-height: 1;
+		color: @color__black;
+	}
+}

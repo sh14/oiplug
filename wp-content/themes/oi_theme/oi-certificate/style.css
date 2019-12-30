@@ -1,0 +1,92 @@
+body {
+  height: 2000px;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16pt;
+  font-weight: 300;
+  /*background: url(cert.png) 50% 0% / contain no-repeat;*/
+  background-color: #eee;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+div {
+  box-sizing: border-box;
+}
+.cert {
+  background-color: #fff;
+  margin: auto;
+  width: 1048px;
+  padding: 2em;
+  color: #ccc;
+  text-align: center;
+}
+.cert__border {
+  position: relative;
+  border: 5px solid #000;
+  padding: 0 4em;
+  height: 635px;
+}
+.cert__title {
+  font-size: 2em;
+  color: #000;
+  margin: 1em 0;
+  line-height: 1;
+}
+.cert__subtitle {
+  line-height: 1;
+}
+.cert__name {
+  font-size: 2em;
+  color: #000;
+  font-weight: 400;
+  margin: 1em 0;
+  line-height: 1;
+}
+.cert__description {
+  line-height: 1.5;
+}
+.cert__profession {
+  font-size: 2em;
+  color: #000;
+  line-height: 1;
+  margin: 1em 0;
+}
+.cert__description2 {
+  line-height: 1;
+}
+.cert__date {
+  line-height: 1;
+  top: -2em;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.cert__id-block {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: -1.3em;
+}
+.cert__id-block-container {
+  margin: auto;
+  display: table;
+  background-color: #fff;
+}
+.cert__url {
+  color: #000;
+  font-size: .6em;
+  line-height: 1;
+  padding: 0 0 .4em 0;
+}
+.cert__id {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  line-height: 1;
+  color: #000;
+}
+/*# sourceMappingURL=style.css.map */
